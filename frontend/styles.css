@@ -1,0 +1,120 @@
+.container-fluid {
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.bg-login {
+  background: url("./bg_hom.jpg")
+    no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.85; 
+}
+
+
+h1 {
+  color: black;
+  font-size: 50px !important;
+  /* background: rgba(0, 0, 0, 0.8); */
+  display: inline-block;
+}
+
+h3 {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  /* background: rgba(0, 0, 0, 0.8); */
+  display: inline-block;
+}
+
+.brand{
+  color: black;
+}
+
+h4 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.login-area {
+  background-color: #77777766;
+  height: 100vh;
+}
+
+.input-group-text i {
+  font-size: 13px !important;
+  color: #777;
+  text-align: center;
+}
+
+.input-group-text {
+  width: 40px !important;
+  background-color: #f4f4f4 !important;
+}
+
+input,
+.input-group-text {
+  border: 1px solid #f0f0f0 !important;
+}
+
+button {
+  font-weight: 800 !important;
+}
+
+.content{
+  position: relative;
+  top: 20vh;
+  padding: 0 30px;
+  background-color: #cdcdcd73;
+  text-align: center;
+}
+
+form {
+  position: relative;
+  top: 20vh;
+  padding: 0 30px;
+}
+
+form {
+  top: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content .brand {
+  margin-bottom: 20px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+.button{
+  width: 250px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.button div{
+  padding: 10px;
+  border-radius: 20px;
+}
+
+@media (min-width: 300px) and (max-width: 12000px) {
+  .bg-login {
+    display: block;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 300px) {
+  .bg-login {
+    display: none;
+  }
+}

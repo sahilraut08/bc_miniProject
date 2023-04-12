@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Owner</title>
+    <link rel="stylesheet" href="LBstyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1-rc.2/web3.min.js" integrity="sha512-KURAVUCRxZKDemghhiNqTnYzVPUtO3GYznBZRWRBT2GJJ5PmePAxfO7QMGCM8xUJ0QfrUYJDrtRJM4L4NOtfow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+
+  <body class="main_body">
+    <div class="container-fluid">
+      <div>
+        <div class="row d-flex justify-content-center">
+          <!-- <div class="col-md-12 bg-login">
+            <img src="" alt="" />
+            <div class="content">
+              <h1 class="brand">Hello Borrower!</h1>
+              <br />
+              <h3>Fill in the details to submit a loan proposal!</h3>
+            </div>
+          </div> -->
+
+          <div class="col-md-8 mt-3 pb-4 login-area">
+            <form>
+              <h3>Hello Owner!</h3>
+              <h4>Please enter the details to rent out your property!</h4>
+              <div class="form-group">
+                <div class="form-group">
+                  <p class="nav-item ml-auto">Account no.</p>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                      <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="acc"
+                    placeholder="Account No."
+                    aria-label="Account No."
+                    aria-describedby="basic-addon1"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <p class="nav-item ml-auto">Rent Amount</p>
+              </div>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                      <i class="fab fa-ethereum"></i>
+                    </span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control amount"
+                    id="loanAmount"
+                    placeholder="Rent Amount"
+                    aria-label="Loan Amount"
+                    aria-describedby="basic-addon1"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <p class="nav-item ml-auto">Due Date</p>
+              </div>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                      <i class="fas fa-clock"></i>
+                    </span>
+                  </div>
+                  <input
+                    type="date"
+                    class="form-control date"
+                    id="date"
+                    placeholder="Loan Amount"
+                    aria-label="Loan Amount"
+                    aria-describedby="basic-addon1"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <p class="nav-item ml-auto">Upload Agreement</p>
+              </div>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                      <i class="fas fa-file"></i>
+                    </span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="mortgage"
+                    placeholder="Rental Agreement Address"
+                    aria-label="Loan Amount"
+                    aria-describedby="basic-addon1"
+                    required
+                  />
+                </div>
+              </div>
+              <br />
+              <div class="row d-flex justify-content-center">
+                <button id="submit" type="submit" class="btn btn-success btn-md" style="width: 400px;">
+                <i class="fas fa-search-dollar"></i> Submit Rental Proposal
+              </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Renter Address</th>
+              <th>Amount</th>
+              <th>Deposit%</th>
+              <th></th>
+              <th></th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <td data-label="Renter Address">
+                0x2187c0284267aB64751E49F04B817e5c5ddab9dF
+              </td>
+              <td data-label="Amount">20,000</td>
+              <td data-label="Deposit">15%</td>
+              <td data-label="">
+                <a href="#" class="btn btn__active">Get Rent</a>
+              </td>
+              <td data-label="">
+                <a href="#" class="btn btn__active">Deny</a>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
